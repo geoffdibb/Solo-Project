@@ -1,4 +1,4 @@
-package COM.BAE.PersistenceRepository;
+package COM.BAE.PersistenceDomain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -28,6 +28,22 @@ public class KaijuAccount {
 	}
 
 	public KaijuAccount() {
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getCreatureType() {
+		return creatureType;
+	}
+
+	public void setCreatureType(String creatureType) {
+		this.creatureType = creatureType;
 	}
 
 	public String getDescription() {
