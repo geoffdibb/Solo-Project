@@ -24,9 +24,9 @@ public class KaijuAccountDBRepository implements KaijuAccountRepository {
 	@Override
 	public String getAllKaijuAccounts() {
 		Query query = manager.createQuery("Select a FROM Account a");
-		Collection<KaijuAccount> kaijuaccounts = (Collection<KaijuAccount>) query.getResultList();
+		Collection<KaijuAccount> kaijuAccounts = (Collection<KaijuAccount>) query.getResultList();
 
-		return util.getJSONForObject(kaijuaccounts);
+		return util.getJSONForObject(kaijuAccounts);
 	}
 
 	@Override

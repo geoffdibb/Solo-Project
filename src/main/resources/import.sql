@@ -1,5 +1,11 @@
-INSERT INTO ACCOUNT (id, accountNumber, firstName, lastName) VALUES (1, '1','John', 'Doe')
-INSERT INTO ACCOUNT (id, accountNumber, firstName, lastName) VALUES (2, '2','Jill', 'Doe')
-INSERT INTO ACCOUNT (id, accountNumber, firstName, lastName) VALUES (3, '3','Jane', 'Smith')
-INSERT INTO ACCOUNT (id, accountNumber, firstName, lastName) VALUES (4, '4','Jack', 'Dunn')
+INSERT INTO ACCOUNT (name, height, weight, creatureType, description) VALUES ('Zilla', '100','150', 'Lizard', 'A big Lizard')
+
+
+INSERT INTO ACCOUNT (name, height, weight, creatureType, description) VALUES ('GodZilla', '100','150', 'Lizard', 'A big Lizard')
+
+
+INSERT INTO ACCOUNT (name, height, weight, creatureType, description) VALUES ('Mothra', '100','150', 'Lizard', 'A big Lizard')
+
+
+INSERT INTO ACCOUNT (name, height, weight, creatureType, description) VALUES ('King Ghidorrah', '100','150', 'Lizard', 'A big Lizard')
 
