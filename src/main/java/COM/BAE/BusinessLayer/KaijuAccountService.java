@@ -1,10 +1,10 @@
-package COM.BASE.BusinessLayer;
+package COM.BAE.BusinessLayer;
 
 public interface KaijuAccountService {
 
 	String getAllKaijuAccounts();
 
-	String createKaijuAccount(String name);
+	String createKaijuAccount(String account);
 
 	String deleteKaijuAccount(String name);
 

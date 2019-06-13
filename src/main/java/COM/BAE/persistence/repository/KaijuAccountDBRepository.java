@@ -21,17 +21,16 @@ public class KaijuAccountDBRepository implements KaijuAccountRepository {
 	@Inject
 	private JSONUtil util;
 
-	@Override
 	public String getAllKaijuAccounts() {
-		Query query = manager.createQuery("Select a FROM Account a");
+		Query query = manager.createQuery("Select a FROM KaijuAccount a");
 		Collection<KaijuAccount> kaijuAccounts = (Collection<KaijuAccount>) query.getResultList();
-
 		return util.getJSONForObject(kaijuAccounts);
+
 	}
 
 	@Override
-	public String createKaijuAccount(String name) {
-		KaijuAccount akaijuAccount = util.getObjectForJSON(name, KaijuAccount.class);
+	public String createKaijuAccount(String account) {
+		KaijuAccount akaijuAccount = util.getObjectForJSON(account, KaijuAccount.class);
 		manager.persist(akaijuAccount);
 		return "{\"message\": \"Kaiju has been sucessfully added\"}";
 	}

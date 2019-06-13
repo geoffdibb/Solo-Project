@@ -9,7 +9,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
-import COM.BASE.BusinessLayer.KaijuAccountService;
+import COM.BAE.BusinessLayer.KaijuAccountService;
 
 @Path("kaijuAccount")
 public class KaijuAccountController {
@@ -17,7 +17,7 @@ public class KaijuAccountController {
 	@Inject
 	private KaijuAccountService service;
 
-	@Path("/getAllKaijuAccounts")
+	@Path("getAllKaijuAccounts")
 	@GET
 	@Produces({ "application/json" })
 	public String getAllKaijuAccounts() {
@@ -27,8 +27,8 @@ public class KaijuAccountController {
 	@Path("/getAKaijuAccount/{name}")
 	@GET
 	@Produces({ "application/json" })
-	public String getAnAccount(@PathParam("name") String name) {
-		return service.getAKaijuAccount(name);
+	public String getAnAccount(@PathParam("name") String account) {
+		return service.getAKaijuAccount(account);
 	}
 
 	@Path("/createKaijuAccount")

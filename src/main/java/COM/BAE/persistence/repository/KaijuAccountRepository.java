@@ -4,7 +4,7 @@ public interface KaijuAccountRepository {
 
 	String getAllKaijuAccounts();
 
-	String createKaijuAccount(String name);
+	String createKaijuAccount(String account);
 
 	String deleteKaijuAccount(String name);
 
