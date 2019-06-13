@@ -17,7 +17,7 @@ public class KaijuAccountController {
 	@Inject
 	private KaijuAccountService service;
 
-	@Path("getAllKaijuAccounts")
+	@Path("/getAllKaijuAccounts")
 	@GET
 	@Produces({ "application/json" })
 	public String getAllKaijuAccounts() {
