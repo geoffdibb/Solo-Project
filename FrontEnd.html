@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <center>
+        <div class="container p-3">
+
+            <div class="row">
+                <div class="col p-3 display-1 font-weight-bold">
+                    Kaiju Manager 2019
+                    <div class="col">
+                    </div>
+                </div>
+
+            </div>
+            <script type="text/javascript" src="Frontendcode.js">
+
+            </script>
+            <form name="api">
+
+                <input class="btn btn-success btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="CreateAccount" value="CreateAccount"
+                    onclick="clickActions.createKaijuAcc()"> </input>
+
+                <input class="btn btn-success btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="GetallKaiju" value="Display all Kaiju"
+                    onclick="clickActions.getAllKaiju()"> </input>
+
+                <input class="btn btn-success btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="deleteaccount" value="deleteaccount"
+                    onclick="clickActions.deleteKaijuAcc()"> </input>
+
+                <input class="btn btn-success btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="getaccountbyid" value="GetAKaiju"
+                    onclick="clickActions.getKaijubyname()"> </input>
+
+                <input class="btn btn-success btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="updatetheAccount" value="updatetheAccount"
+                    onclick="clickActions.updateKaijuAcc()"> </input>
+
+
+                <div> KaijuName
+                    <input type="text" id="kaijuName" class="form-control">
+                </div>
+             
+
+
+                <div id="results"></div>
+            </form>
+        </div>
+    </center>
+</body>
+
+
+</html>

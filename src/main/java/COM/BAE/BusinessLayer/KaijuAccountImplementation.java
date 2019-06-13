@@ -1,4 +1,4 @@
-package COM.BASE.BusinessLayer;
+package COM.BAE.BusinessLayer;
 
 import javax.inject.Inject;
 
@@ -11,18 +11,17 @@ public class KaijuAccountImplementation implements KaijuAccountService {
 
 	@Override
 	public String getAllKaijuAccounts() {
-
 		return kaijuAccountRepo.getAllKaijuAccounts();
 	}
 
 	@Override
-	public String createKaijuAccount(String name) {
-		return kaijuAccountRepo.createKaijuAccount(name);
+	public String createKaijuAccount(String account) {
+		return kaijuAccountRepo.createKaijuAccount(account);
 	}
 
 	@Override
-	public String deleteKaijuAccount(String name) {
-		return kaijuAccountRepo.deleteKaijuAccount(name);
+	public String deleteKaijuAccount(String account) {
+		return kaijuAccountRepo.deleteKaijuAccount(account);
 	}
 
 	@Override
