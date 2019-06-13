@@ -1,35 +1,38 @@
 package COM.BASE.BusinessLayer;
 
+import javax.inject.Inject;
+
+import COM.BAE.persistence.repository.KaijuAccountRepository;
+
 public class KaijuAccountImplementation implements KaijuAccountService {
+
+	@Inject
+	KaijuAccountRepository kaijuAccountRepo;
 
 	@Override
 	public String getAllKaijuAccounts() {
-		// TODO Auto-generated method stub
-		return null;
+
+		return kaijuAccountRepo.getAllKaijuAccounts();
 	}
 
 	@Override
 	public String createKaijuAccount(String name) {
-		// TODO Auto-generated method stub
-		return null;
+		return kaijuAccountRepo.createKaijuAccount(name);
 	}
 
 	@Override
 	public String deleteKaijuAccount(String name) {
-		// TODO Auto-generated method stub
-		return null;
+		return kaijuAccountRepo.deleteKaijuAccount(name);
 	}
 
 	@Override
 	public String updateKaijuAccount(String name) {
-		// TODO Auto-generated method stub
-		return null;
+		return kaijuAccountRepo.updateKaijuAccount(name);
 	}
 
 	@Override
 	public String getAKaijuAccount(String name) {
-		// TODO Auto-generated method stub
-		return null;
+		return kaijuAccountRepo.getAKaijuAccount(name);
 	}
 
 }
