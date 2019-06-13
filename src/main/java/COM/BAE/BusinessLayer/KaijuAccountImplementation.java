@@ -20,8 +20,8 @@ public class KaijuAccountImplementation implements KaijuAccountService {
 	}
 
 	@Override
-	public String deleteKaijuAccount(String name) {
-		return kaijuAccountRepo.deleteKaijuAccount(name);
+	public String deleteKaijuAccount(String account) {
+		return kaijuAccountRepo.deleteKaijuAccount(account);
 	}
 
 	@Override

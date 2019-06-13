@@ -41,8 +41,8 @@ public class KaijuAccountController {
 	@Path("/deleteKaijuAccount/{name}")
 	@DELETE
 	@Produces({ "application/json" })
-	public String deleteAccount(@PathParam("name") String name) {
-		return service.deleteKaijuAccount(name);
+	public String deleteAccount(@PathParam("name") String account) {
+		return service.deleteKaijuAccount(account);
 	}
 
 	@Path("/updateKaijuAccount/{name}")

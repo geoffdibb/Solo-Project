@@ -1,5 +1,8 @@
 package COM.BAE.persistence.repository;
 
+import static javax.transaction.Transactional.TxType.REQUIRED;
+import static javax.transaction.Transactional.TxType.SUPPORTS;
+
 import java.util.Collection;
 
 import javax.enterprise.inject.Default;
@@ -7,11 +10,13 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.transaction.Transactional;
 
 import COM.BAE.PersistenceDomain.FilmData;
 import COM.BAE.PersistenceDomain.KaijuAccount;
 import COM.BAE.Util.JSONUtil;
 
+@Transactional(SUPPORTS)
 @Default
 public class KaijuAccountDBRepository implements KaijuAccountRepository {
 
@@ -36,15 +41,16 @@ public class KaijuAccountDBRepository implements KaijuAccountRepository {
 	}
 
 	@Override
-	public String deleteKaijuAccount(String name) {
+	@Transactional(REQUIRED)
+	public String deleteKaijuAccount(String account) {
 
-		KaijuAccount kaijuAccountInDB = util.getObjectForJSON(getAKaijuAccount(name), KaijuAccount.class);
+		KaijuAccount kaijuAccountInDB = util.getObjectForJSON(getAKaijuAccount(account), KaijuAccount.class);
 
-		if (manager.contains(manager.find(KaijuAccount.class, name))) {
+		if (manager.contains(manager.find(KaijuAccount.class, account))) {
 
-			manager.remove(manager.find(KaijuAccount.class, name));
+			manager.remove(manager.find(KaijuAccount.class, account));
 		}
-		return "{\"message\": \"Kaiju successfully deleted\"}";
+		return account + " Deleted";
 	}
 
 	@Override

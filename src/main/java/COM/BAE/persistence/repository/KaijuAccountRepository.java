@@ -6,7 +6,7 @@ public interface KaijuAccountRepository {
 
 	String createKaijuAccount(String account);
 
-	String deleteKaijuAccount(String name);
+	String deleteKaijuAccount(String acount);
 
 	String updateKaijuAccount(String name);
 
