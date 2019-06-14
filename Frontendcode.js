@@ -26,7 +26,7 @@ const clickActions = {
     getKaijubyname: () => buttonClick('GET', 'http://localhost:8080/SoloProject/api/kaijuAccount/getAKaijuAccount/' + getaccname()),
     getAllKaiju: () => buttonClick("GET", "http://localhost:8080/SoloProject/api/kaijuAccount/getAllKaijuAccounts"),
 
-    deleteKaijuAcc: () => buttonClick('DELETE', 'http://localhost:8080/SoloProject/api/kaijuAccount/getAllKaijuAccounts' + getaccname()),
+    deleteKaijuAcc: () => buttonClick('DELETE', 'http://localhost:8080/SoloProject/api/kaijuAccount/deleteKaijuAccount/' + getaccname()),
     createKaijuAcc: () => buttonClick('POST', 'http://localhost:8080/AccountSETemplate/api/account/createAccount', createAccount()),
 
     updateKaijuAcc: () => buttonClick("PUT", "http://localhost:8080/AccountSETemplate/api/account/updateAccount/" + getaccname(), updateAccount())
