@@ -1,24 +1,27 @@
 function createAccount() {
 
     const account = {
-        accountNumber: document.getElementById("accNameInput").value,
-        lastName: document.getElementById("lastNameInput").value,
-        firstName: document.getElementById("firstNameInput").value
+        name: document.getElementById("kaijuNameInput").value,
+        height: document.getElementById("heightInput").value,
+        weight: document.getElementById("weightInput").value,
+        creatureType: document.getElementById("creatureTypeInput").value,
+        description: document.getElementById("descriptionInput").value
     };
     return JSON.stringify(account);
 }
 
 function updateAccount() {
     const accountupd = {
-        accountName: document.getElementById("accNameInput").value,
-        firstName: document.getElementById("firstNameInput").value,
-        lastName: document.getElementById("lastNameInput").value
-
+        name: document.getElementById("kaijuNameInput").value,
+        height: document.getElementById("heightInput").value,
+        weight: document.getElementById("weightInput").value,
+        creatureType: document.getElementById("creatureTypeInput").value,
+        description: document.getElementById("descriptionInput").value
     };
     return JSON.stringify(accountupd);
 }
 function getaccname() {
-    let text = document.getElementById("kaijuName").value;
+    let text = document.getElementById("kaijuNameInput").value;
     return text;
 }
 
@@ -27,9 +30,9 @@ const clickActions = {
     getAllKaiju: () => buttonClick("GET", "http://localhost:8080/SoloProject/api/kaijuAccount/getAllKaijuAccounts"),
 
     deleteKaijuAcc: () => buttonClick('DELETE', 'http://localhost:8080/SoloProject/api/kaijuAccount/deleteKaijuAccount/' + getaccname()),
-    createKaijuAcc: () => buttonClick('POST', 'http://localhost:8080/AccountSETemplate/api/account/createAccount', createAccount()),
+    createKaijuAcc: () => buttonClick('POST', 'http://localhost:8080/SoloProject/api/kaijuAccount//createKaijuAccount', createAccount()),
 
-    updateKaijuAcc: () => buttonClick("PUT", "http://localhost:8080/AccountSETemplate/api/account/updateAccount/" + getaccname(), updateAccount())
+    updateKaijuAcc: () => buttonClick("PUT", 'http://localhost:8080/SoloProject/api/kaijuAccount/updateKaijuAccount/' + getaccname(), updateAccount())
 };
 function buttonClick(reqType, url, body) {
 
