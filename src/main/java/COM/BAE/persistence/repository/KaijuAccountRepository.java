@@ -12,13 +12,4 @@ public interface KaijuAccountRepository {
 
 	String getAKaijuAccount(String name);
 
-	String getAllKaijuFilmData();
-
-	String createKaijuFilmData(String name);
-
-	String deleteKaijuFilmData(String name);
-
-	String updateKaijuFilmData(String name);
-
-	String getKaijuFilmData(String name);
 }
