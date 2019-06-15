@@ -1,4 +1,4 @@
-function createAccount() {
+function createkaijuAccount() {
 
     const account = {
         name: document.getElementById("kaijuNameInput").value,
@@ -30,7 +30,7 @@ const clickActions = {
     getAllKaiju: () => buttonClick("GET", "http://localhost:8080/SoloProject/api/kaijuAccount/getAllKaijuAccounts"),
 
     deleteKaijuAcc: () => buttonClick('DELETE', 'http://localhost:8080/SoloProject/api/kaijuAccount/deleteKaijuAccount/' + getaccname()),
-    createKaijuAcc: () => buttonClick('POST', 'http://localhost:8080/SoloProject/api/kaijuAccount//createKaijuAccount', createAccount()),
+    createKaijuAcc: () => buttonClick('POST', 'http://localhost:8080/SoloProject/api/kaijuAccount//createKaijuAccount', createkaijuAccount()),
 
     updateKaijuAcc: () => buttonClick("PUT", 'http://localhost:8080/SoloProject/api/kaijuAccount/updateKaijuAccount/' + getaccname(), updateAccount())
 };
