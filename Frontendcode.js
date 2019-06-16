@@ -36,6 +36,8 @@ const clickActions = {
     createKaijuAcc: () => buttonClick('POST', 'http://localhost:8080/SoloProject/api/kaijuAccount/createKaijuAccount', createkaijuAccount()),
 
     updateKaijuAcc: () => buttonClick("PUT", 'http://localhost:8080/SoloProject/api/kaijuAccount/updateKaijuAccount/' + getaccname(), updateAccount()),
+    getFilmbyname: () => buttonClick('GET', 'http://localhost:8080/SoloProject/api/FilmData/getAFilmData/' + getaccname()),
+
 };
 function buttonClick(reqType, url, body) {
 
