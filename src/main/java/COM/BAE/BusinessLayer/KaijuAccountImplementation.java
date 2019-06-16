@@ -25,8 +25,8 @@ public class KaijuAccountImplementation implements KaijuAccountService {
 	}
 
 	@Override
-	public String updateKaijuAccount(String name) {
-		return kaijuAccountRepo.updateKaijuAccount(name);
+	public String updateKaijuAccount(String name, String account) {
+		return kaijuAccountRepo.updateKaijuAccount(name, account);
 	}
 
 	@Override

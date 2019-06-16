@@ -48,8 +48,8 @@ public class KaijuAccountController {
 	@Path("/updateKaijuAccount/{name}")
 	@PUT
 	@Produces({ "application/json" })
-	public String updateAccount(@PathParam("name") String name) {
-		return service.updateKaijuAccount(name);
+	public String updateAccount(@PathParam("name") String name, String account) {
+		return service.updateKaijuAccount(name, account);
 	}
 
 	public void setService(KaijuAccountService service) {

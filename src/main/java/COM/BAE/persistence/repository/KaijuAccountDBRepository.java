@@ -33,6 +33,7 @@ public class KaijuAccountDBRepository implements KaijuAccountRepository {
 	}
 
 	@Override
+	@Transactional(REQUIRED)
 	public String createKaijuAccount(String account) {
 		KaijuAccount akaijuAccount = util.getObjectForJSON(account, KaijuAccount.class);
 		manager.persist(akaijuAccount);
@@ -53,20 +54,24 @@ public class KaijuAccountDBRepository implements KaijuAccountRepository {
 	}
 
 	@Override
-	public String updateKaijuAccount(String name) {
-		KaijuAccount transAccount = util.getObjectForJSON(name, KaijuAccount.class);
+	@Transactional(REQUIRED)
+	public String updateKaijuAccount(String name, String account) {
+		KaijuAccount transAccount = util.getObjectForJSON(account, KaijuAccount.class);
 
 		KaijuAccount oldAccount = manager.find(KaijuAccount.class, name);
 
 		if (oldAccount != null) {
 
-			oldAccount.setName(transAccount.getName());
+			oldAccount.setHeight(transAccount.getHeight());
+			oldAccount.setWeight(transAccount.getWeight());
+			oldAccount.setCreatureType(transAccount.getCreatureType());
+			oldAccount.setDescription(transAccount.getDescription());
 
 			manager.persist(oldAccount);
 
 		}
 
-		return "{\"message\": \"Kaiju successfully updated\"}";
+		return null;
 	}
 
 	@Override
