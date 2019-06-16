@@ -71,7 +71,7 @@ public class KaijuAccountDBRepository implements KaijuAccountRepository {
 
 		}
 
-		return "{\"message\": \"Kaiju successfully updated\"}";
+		return null;
 	}
 
 	@Override
