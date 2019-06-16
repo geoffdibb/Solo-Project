@@ -1,5 +1,6 @@
 package COM.BAE.persistence.repository;
 
+import static javax.transaction.Transactional.TxType.REQUIRED;
 import static javax.transaction.Transactional.TxType.SUPPORTS;
 
 import java.util.Collection;
@@ -33,6 +34,7 @@ public class FilmDataDBRepository implements FilmDataRepository {
 	}
 
 	@Override
+	@Transactional(REQUIRED)
 	public String createKaijuFilmData(String name) {
 		FilmData akaijuFilmdata = util.getObjectForJSON(name, FilmData.class);
 		manager.persist(akaijuFilmdata);
@@ -40,6 +42,7 @@ public class FilmDataDBRepository implements FilmDataRepository {
 	}
 
 	@Override
+	@Transactional(REQUIRED)
 	public String deleteKaijuFilmData(String name) {
 		FilmData filmDataInDB = util.getObjectForJSON(getKaijuFilmData(name), FilmData.class);
 
@@ -51,6 +54,7 @@ public class FilmDataDBRepository implements FilmDataRepository {
 	}
 
 	@Override
+	@Transactional(REQUIRED)
 	public String updateKaijuFilmData(String name) {
 		FilmData transAccount = util.getObjectForJSON(name, FilmData.class);
 

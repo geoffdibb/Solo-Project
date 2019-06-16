@@ -8,7 +8,7 @@ public interface KaijuAccountService {
 
 	String deleteKaijuAccount(String account);
 
-	String updateKaijuAccount(String name);
+	String updateKaijuAccount(String name, String account);
 
 	String getAKaijuAccount(String name);
 }

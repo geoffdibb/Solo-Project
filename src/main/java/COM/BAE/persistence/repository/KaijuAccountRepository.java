@@ -8,7 +8,7 @@ public interface KaijuAccountRepository {
 
 	String deleteKaijuAccount(String acount);
 
-	String updateKaijuAccount(String name);
+	String updateKaijuAccount(String name, String account);
 
 	String getAKaijuAccount(String name);
 
