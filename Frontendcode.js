@@ -73,7 +73,7 @@ function promises(req) {
 function resolved(result) {
     if (result.name === undefined) {
         for (let c in result) {
-            let output = "account" + JSON.stringify(result[c].name) + JSON.stringify(result[c].height);
+            let output = "account" + JSON.stringify(result[c].name);
             let textnode = document.createTextNode(output);
             let node = document.createElement("div");
             node.setAttribute("id", "resInner");
@@ -86,7 +86,7 @@ function resolved(result) {
         node.setAttribute("id", "resInner");
         document.getElementById("results").appendChild(node);
 
-        let output = "account" + JSON.stringify(result.name)
+        let output = " Codename : " + JSON.stringify(result.name) + " Height(feet) : " + JSON.stringify(result.height) + " Weight(lbs) : "+ JSON.stringify(result.weight) +" Genus : "+ JSON.stringify(result.creatureType) + " Description : "+ JSON.stringify(result.description)
         let textnode = document.createTextNode(output);
         node.appendChild(textnode);
     }
