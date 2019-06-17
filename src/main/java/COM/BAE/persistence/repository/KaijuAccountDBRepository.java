@@ -50,7 +50,7 @@ public class KaijuAccountDBRepository implements KaijuAccountRepository {
 
 			manager.remove(manager.find(KaijuAccount.class, account));
 		}
-		return account + " Deleted";
+		return account + "Deleted";
 	}
 
 	@Override
