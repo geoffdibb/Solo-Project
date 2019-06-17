@@ -1,5 +1,7 @@
 package COM.BAE.persistence.repositoryTests;
 
+import static org.junit.Assert.assertTrue;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,6 +43,8 @@ public class KaijuAccountDBRepoTests {
 		repo.setUtil(util);
 	}
 
+	private static final String MOCK_OBJECT = "{\"name\":\"Zilla\",\"height\":15,\"weight\":15,\"creatureType\":\"lizard\",\"description\":\"big lizard\"}";
+
 	@Test
 	public void getAllKaijuAccountsTest() {
 
@@ -57,6 +61,18 @@ public class KaijuAccountDBRepoTests {
 		Assert.assertEquals(
 				"[{\"name\":\"Zilla\",\"height\":15,\"weight\":15,\"creatureType\":\"lizard\",\"description\":\"big lizard\"}]",
 				repo.getAllKaijuAccounts());
+	}
+
+	@Test
+	public void testCreateKaiju() {
+		String reply = repo.createKaijuAccount(MOCK_OBJECT);
+		Assert.assertEquals(reply, "{\"message\": \"Kaiju has been sucessfully added\"}");
+	}
+
+	@Test
+	public void testDeleteKAiju() {
+		String reply = repo.deleteKaijuAccount("Zilla");
+		assertTrue(reply.contains("Deleted"));
 	}
 
 }
