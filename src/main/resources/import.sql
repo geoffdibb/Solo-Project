@@ -14,3 +14,6 @@ INSERT INTO KAIJUACCOUNT (name, height, weight, creatureType, description) VALUE
 
 
 INSERT INTO FILMDATA ( name, noOfFilms, firstFilm, winCount) VALUES ('Zilla', '2', 'Godzilla 1998', '0')
+
+
+INSERT INTO FILMDATA ( name, noOfFilms, firstFilm, winCount) VALUES ('GodZilla', '1954', 'Godzilla 1954', '32')

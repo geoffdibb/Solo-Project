@@ -6,8 +6,8 @@ function createkaijuAccount() {
         weight: Number(document.getElementById("weightInput").value),
         creatureType: document.getElementById("creatureTypeInput").value,
         description: document.getElementById("descriptionInput").value
-    };   
-console.log(account);
+    };
+    console.log(account);
     return JSON.stringify(account);
 }
 
@@ -18,7 +18,7 @@ function updateAccount() {
         weight: Number(document.getElementById("weightInput").value),
         creatureType: document.getElementById("creatureTypeInput").value,
         description: document.getElementById("descriptionInput").value
-    
+
     };
     console.log(accountupd);
     return JSON.stringify(accountupd);
@@ -32,11 +32,11 @@ const clickActions = {
     getKaijubyname: () => buttonClick('GET', 'http://localhost:8080/SoloProject/api/kaijuAccount/getAKaijuAccount/' + getaccname()),
     getAllKaiju: () => buttonClick("GET", "http://localhost:8080/SoloProject/api/kaijuAccount/getAllKaijuAccounts"),
     deleteKaijuAcc: () => buttonClick('DELETE', 'http://localhost:8080/SoloProject/api/kaijuAccount/deleteKaijuAccount/' + getaccname()),
-    
+
     createKaijuAcc: () => buttonClick('POST', 'http://localhost:8080/SoloProject/api/kaijuAccount/createKaijuAccount', createkaijuAccount()),
 
     updateKaijuAcc: () => buttonClick("PUT", 'http://localhost:8080/SoloProject/api/kaijuAccount/updateKaijuAccount/' + getaccname(), updateAccount()),
-    getFilmbyname: () => buttonClick('GET', 'http://localhost:8080/SoloProject/api/FilmData/getAFilmData/' + getaccname()),
+    //getFilmbyname: () => buttonClick('GET', 'http://localhost:8080/SoloProject/api/FilmData/getAFilmData/' + getaccname()),
 
 };
 function buttonClick(reqType, url, body) {
@@ -73,31 +73,86 @@ function promises(req) {
 
 }
 function resolved(result) {
+    let node = document.createElement("tbody");
+    node.setAttribute("id", "tbody");
+    document.getElementById("results").appendChild(node);
+    let tr = "<tr>";
     if (result.name === undefined) {
-        for (let c in result) {
-            let output = "Codename : " + JSON.stringify(result[c].name);
-            
-            let textnode = document.createTextNode(output);
+        tr += "<td> Codename </td></tr>";
 
-            let node = document.createElement("div");
-            node.setAttribute("id", "resInner");
-            document.getElementById("results").appendChild(node);
-            node.appendChild(textnode);
+
+        for (let c in result) {
+
+            let btn = '<input class="btn btn-success btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="filmbutton" value="filmbutton" onclick="clickActions.getFilmbyname()">'
+
+            tr += "<td>" + result[c].name + "</td> </tr>";
+
+            // let node = document.createElement("div");
+            // node.setAttribute("id", "resInner");
+            // document.getElementById("results").appendChild(node);
+            // node.appendChild(textnode);
         }
+        tbody.innerHTML += tr;
     }
     else {
-        let node = document.createElement("div");
-        node.setAttribute("id", "resInner");
-        document.getElementById("results").appendChild(node);
+        tr += "<td> Codename </td> <td> Height </td> <td> Weight</td> <td>genus</td> <td>Description </td> <td> more</td></tr>";
 
-        let output = " Codename : " + JSON.stringify(result.name) + " Height(feet) : " + JSON.stringify(result.height) + " Weight(lbs) : "+ JSON.stringify(result.weight) +" Genus : "+ JSON.stringify(result.creatureType) + " Description : "+ JSON.stringify(result.description)
-        let textnode = document.createTextNode(output);
-       
+        let btn = '<input class="btn btn-success btn btn-primary btn-lg mx-auto font-weight-bold" id="btnfilm" type="button" name="filmbutton" value="filmbutton" onclick="filmDetailButton()">'
 
-        node.appendChild(textnode);
+        tr += "<td>" + result.name + "</td> <td>" + result.height + "</td> <td>" + result.weight + "</td> <td>" + result.creatureType + "</td> <td>" + result.description + "</td> <td>" + btn + "</td> </tr>";
+        //  let textnode = document.createTextNode(output);
+
+
+        // node.appendChild(textnode);
+        tbody.innerHTML += tr;
+
     }
 }
 
 function rejected(reason) {
     console.log(reason);
+}
+
+
+function filmDetailButton() {
+
+    let req = new XMLHttpRequest()
+    req.onload = function () {
+        promisesfilm(req);
+    }
+    req.open('GET', 'http://localhost:8080/SoloProject/api/FilmData/getAFilmData/' + getaccname());
+    req.send();
+}
+function promisesfilm(req) {
+    const createPromise = new Promise(
+        function (res, rej) {
+            if (req.status === 200) {
+                let result = JSON.parse(req.responseText);
+                res(result);
+
+            } else {
+                const reason = new Error("Invalid entry field")
+                rej(reason);
+            }
+        }
+
+
+    )
+    createPromise
+        .then((result) => resolvefilm(result))
+        .catch(error => rejected(error))
+
+}
+
+function resolvefilm(result) {
+     let node = document.createElement("tbody");
+    node.setAttribute("id", "tbodyfilm");
+    document.getElementById("results").appendChild(node);
+        let tr = "<br><tr>";
+        tr += "<td> Number Of Films </td> <td> First Film </td> <td> Win Count</td> </tr>";
+
+        tr += "<td>" + result.noOfFilms + "</td> <td>" + result.firstFilm + "</td> <td>" + result.winCount + "</td></tr>";
+        tbodyfilm.innerHTML += tr;
+
+
 }
