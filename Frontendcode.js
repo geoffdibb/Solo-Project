@@ -75,6 +75,8 @@ function promises(req) {
 function resolved(result) {
     let node = document.createElement("tbody");
     node.setAttribute("id", "tbody");
+    node.setAttribute("class","table");
+
     document.getElementById("results").appendChild(node);
     let tr = "<tr>";
     if (result.name === undefined) {
@@ -95,9 +97,9 @@ function resolved(result) {
         tbody.innerHTML += tr;
     }
     else {
-        tr += "<td> Codename </td> <td> Height </td> <td> Weight</td> <td>genus</td> <td>Description </td> <td> more</td></tr>";
+        tr += "<td> ___Codename___ </td> <td> ___Height___ </td> <td> ___Weight___ </td> <td> ___genus___ </td> <td> ___Description___ </td> <td> ___more___ </td></tr>";
 
-        let btn = '<input class="btn btn-success btn btn-primary btn-lg mx-auto font-weight-bold" id="btnfilm" type="button" name="filmbutton" value="filmbutton" onclick="filmDetailButton()">'
+        let btn = '<input class="btn btn-success btn btn-primary btn mx-auto font-weight-bold" id="btnfilm" type="button" name="filmbutton" value="filmbutton" onclick="filmDetailButton()">'
 
         tr += "<td>" + result.name + "</td> <td>" + result.height + "</td> <td>" + result.weight + "</td> <td>" + result.creatureType + "</td> <td>" + result.description + "</td> <td>" + btn + "</td> </tr>";
         //  let textnode = document.createTextNode(output);
