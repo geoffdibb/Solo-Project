@@ -56,7 +56,7 @@ public class KaijuAccountDBRepoTests {
 
 		Mockito.when(query.getResultList()).thenReturn(kaiju);
 
-		System.out.println(repo.getAllKaijuAccounts());
+		// System.out.println(repo.getAllKaijuAccounts());
 
 		Assert.assertEquals(
 				"[{\"name\":\"Zilla\",\"height\":15,\"weight\":15,\"creatureType\":\"lizard\",\"description\":\"big lizard\"}]",
@@ -75,4 +75,23 @@ public class KaijuAccountDBRepoTests {
 		assertTrue(reply.contains("Deleted"));
 	}
 
+	private static final KaijuAccount kaiju1 = new KaijuAccount("Zilla", 15, 15, "lizard", "big lizard");
+
+	@Test
+	public void testgetakaiju() {
+		Mockito.when(manager.createQuery(Mockito.anyString())).thenReturn(query);
+
+		List<KaijuAccount> kaiju = new ArrayList<KaijuAccount>();
+
+		kaiju.add(new KaijuAccount("Zilla", 15, 15, "lizard", "big lizard"));
+
+		Mockito.when(query.getResultList()).thenReturn(kaiju);
+		Mockito.when(manager.find(KaijuAccount.class, "Zilla")).thenReturn(kaiju1);
+		System.out.println(repo.getAKaijuAccount("Zilla"));
+
+		Assert.assertEquals(
+				"{\"name\":\"Zilla\",\"height\":15,\"weight\":15,\"creatureType\":\"lizard\",\"description\":\"big lizard\"}",
+				repo.getAKaijuAccount("Zilla"));
+
+	}
 }
