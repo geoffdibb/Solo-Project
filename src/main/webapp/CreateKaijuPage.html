@@ -17,45 +17,42 @@
                 </div>
 
             </div>
-            <script type="text/javascript" src="Frontendcode.js">
+            <script type="text/javascript" src="CreateKaijuPageJava.js">
 
             </script>
             <form name="api">
 
+                                <input class="btn btn-success btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="backuppage" value="backuppage"
+                    onclick="backpage()">
+
                 <input class="btn btn-success btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="CreateAccount" value="CreateAccount"
-                    onclick="createpage()"> 
+                    onclick="clickActions.createKaijuAcc()">
 
                 <input class="btn btn-success btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="GetallKaiju" value="Display all Kaiju"
-                    onclick="clickActions.getAllKaiju()"> 
-
-                <input class="btn btn-success btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="deleteaccount" value="deleteaccount"
-                    onclick="clickActions.deleteKaijuAcc()"> 
-
-                <input class="btn btn-success btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="getaccountbyid" value="GetAKaiju"
-                    onclick="clickActions.getKaijubyname()"> 
+                    onclick="clickActions.getAllKaiju()">
 
                 <input class="btn btn-success btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="updatetheAccount" value="updatetheAccount"
-                    onclick="clickActions.updateKaijuAcc()"> 
+                    onclick="clickActions.updateKaijuAcc()">
 
 
                 <div> Codename
                     <input type="text" id="kaijuNameInput" class="form-control">
-				</div>
+                </div>
 
-					<div> Height/Wingspan (feet)
-					<input type="number" id="heightInput" class="form-control">
-					</div>
-					<div> Weight (lbs)
+                <div> Height/Wingspan (feet)
+                    <input type="number" id="heightInput" class="form-control">
+                </div>
+                <div> Weight (lbs)
                     <input type="number" id="weightInput" class="form-control">
-					</div>
-					<div> Genus
+                </div>
+                <div> Genus
                     <input type="text" id="creatureTypeInput" class="form-control">
-					</div>
-					<div> Overview
+                </div>
+                <div> Overview
                     <input type="text" id="descriptionInput" class="form-control">
-					</div>
+                </div>
 
-             
+
 
 
                 <div id="results"></div>

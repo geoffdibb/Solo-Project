@@ -29,9 +29,8 @@ function getaccname() {
 }
 
 const clickActions = {
-    getKaijubyname: () => buttonClick('GET', 'http://localhost:8080/SoloProject/api/kaijuAccount/getAKaijuAccount/' + getaccname()),
+
     getAllKaiju: () => buttonClick("GET", "http://localhost:8080/SoloProject/api/kaijuAccount/getAllKaijuAccounts"),
-    deleteKaijuAcc: () => buttonClick('DELETE', 'http://localhost:8080/SoloProject/api/kaijuAccount/deleteKaijuAccount/' + getaccname()),
 
     createKaijuAcc: () => buttonClick('POST', 'http://localhost:8080/SoloProject/api/kaijuAccount/createKaijuAccount', createkaijuAccount()),
 
@@ -116,51 +115,8 @@ function rejected(reason) {
     console.log(reason);
 }
 
-
-function filmDetailButton() {
-
-    let req = new XMLHttpRequest()
-    req.onload = function () {
-        promisesfilm(req);
-    }
-    req.open('GET', 'http://35.246.172.168:8888/SoloProject/api/FilmData/getAFilmData/' + getaccname());
-    req.send();
-}
-function promisesfilm(req) {
-    const createPromise = new Promise(
-        function (res, rej) {
-            if (req.status === 200) {
-                let result = JSON.parse(req.responseText);
-                res(result);
-
-            } else {
-                const reason = new Error("Invalid entry field")
-                rej(reason);
-            }
-        }
-
-
-    )
-    createPromise
-        .then((result) => resolvefilm(result))
-        .catch(error => rejected(error))
-
-}
-
-function resolvefilm(result) {
-     let node = document.createElement("tbody");
-    node.setAttribute("id", "tbodyfilm");
-        node.setAttribute("class","table");
-
-    document.getElementById("results").appendChild(node);
-        let tr = "<br><tr>";
-        tr += "<td> Number Of Films </td> <td> First Film </td> <td> Win Count</td> </tr>";
-
-        tr += "<td>" + result.noOfFilms + "</td> <td>" + result.firstFilm + "</td> <td>" + result.winCount + "</td></tr>";
-        tbodyfilm.innerHTML += tr;
+function backpage(){
+document.location.href = "FrontEnd.html";
 
 
 }
-    function createpage(){
-document.location.href = "CreateKaijuPage.html";
-    };
