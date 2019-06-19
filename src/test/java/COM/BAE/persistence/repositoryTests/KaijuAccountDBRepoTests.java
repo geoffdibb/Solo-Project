@@ -44,6 +44,7 @@ public class KaijuAccountDBRepoTests {
 	}
 
 	private static final String MOCK_OBJECT = "{\"name\":\"Zilla\",\"height\":15,\"weight\":15,\"creatureType\":\"lizard\",\"description\":\"big lizard\"}";
+	private static final String MOCK_OBJECT2 = "{\"name\":\"Zilla\",\"height\":15,\"weight\":15,\"creatureType\":\"lizard\",\"description\":\"big updated lizard\"}";
 
 	@Test
 	public void getAllKaijuAccountsTest() {
@@ -83,15 +84,34 @@ public class KaijuAccountDBRepoTests {
 
 		List<KaijuAccount> kaiju = new ArrayList<KaijuAccount>();
 
-		kaiju.add(new KaijuAccount("Zilla", 15, 15, "lizard", "big lizard"));
+		kaiju.add(new KaijuAccount("Zilla", 15, 15, "lizard", "big updated lizard"));
 
 		Mockito.when(query.getResultList()).thenReturn(kaiju);
 		Mockito.when(manager.find(KaijuAccount.class, "Zilla")).thenReturn(kaiju1);
-		System.out.println(repo.getAKaijuAccount("Zilla"));
 
 		Assert.assertEquals(
-				"{\"name\":\"Zilla\",\"height\":15,\"weight\":15,\"creatureType\":\"lizard\",\"description\":\"big lizard\"}",
+				"{\"name\":\"Zilla\",\"height\":15,\"weight\":15,\"creatureType\":\"lizard\",\"description\":\"big updated lizard\"}",
 				repo.getAKaijuAccount("Zilla"));
+
+	}
+
+	@Test
+	public void testUpdateAKaiju() {
+
+		Mockito.when(manager.createQuery(Mockito.anyString())).thenReturn(query);
+
+		List<KaijuAccount> kaiju = new ArrayList<KaijuAccount>();
+
+		kaiju.add(new KaijuAccount("Zilla", 15, 15, "lizard", "big lizard"));
+
+		Mockito.when(query.getResultList()).thenReturn(kaiju);
+
+		Mockito.when(manager.find(KaijuAccount.class, "Zilla")).thenReturn(kaiju1);
+
+		repo.updateKaijuAccount("Zilla",
+				"{\"name\":\"Zilla\",\"height\":15,\"weight\":15,\"creatureType\":\"lizard\",\"description\":\"big updated lizard\"}");
+
+		Assert.assertEquals(MOCK_OBJECT2, repo.getAKaijuAccount("Zilla"));
 
 	}
 }

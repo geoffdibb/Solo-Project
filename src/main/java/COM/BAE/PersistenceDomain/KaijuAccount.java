@@ -54,14 +54,6 @@ public class KaijuAccount {
 		this.description = description;
 	}
 
-	public String getGenus() {
-		return creatureType;
-	}
-
-	public void setGenus(String genus) {
-		this.creatureType = genus;
-	}
-
 	public int getWeight() {
 		return weight;
 	}
