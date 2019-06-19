@@ -20,8 +20,6 @@ public class KaijuAccountControllertests {
 
 	private static final String MOCK_VALUE = "Zilla";
 
-	public String ainmal = "pokj";
-
 	@InjectMocks
 	private KaijuAccountController endpoint;
 	// Class under test

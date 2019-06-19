@@ -1,4 +1,4 @@
-package COM.BAE.RRestlayertests;
+package COM.BAE.BusinessLayertests;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -9,32 +9,31 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import COM.BAE.BusinessLayer.FilmDataService;
-import COM.BAERestlayer.FilmDataController;
+import COM.BAE.BusinessLayer.FilmDataImplementation;
+import COM.BAE.persistence.repository.FilmDataRepository;
 
 @RunWith(MockitoJUnitRunner.class)
 
-public class FilmDataControllerTests {
+public class FilmDataImplementationTests {
 
 	private static final String MOCK_VALUE2 = "test_value_2";
 
 	private static final String MOCK_VALUE = "Zilla";
 
 	@InjectMocks
-	private FilmDataController endpoint;
+	private FilmDataImplementation endpoint;
 	// Class under test
 
 	@Mock
-	private FilmDataService service;
+	private FilmDataRepository FilmDataRepo;
 
 	@Before
 	public void setup() {
-		endpoint.setService(service);
 	}
 
 	@Test
 	public void testGetAFilm() {
-		Mockito.when(service.getKaijuFilmData("Zilla")).thenReturn(MOCK_VALUE);
-		Assert.assertEquals("Zilla", endpoint.getAFilmData("Zilla"));
+		Mockito.when(FilmDataRepo.getKaijuFilmData("Zilla")).thenReturn(MOCK_VALUE);
+		Assert.assertEquals("Zilla", endpoint.getKaijuFilmData("Zilla"));
 	}
 }
