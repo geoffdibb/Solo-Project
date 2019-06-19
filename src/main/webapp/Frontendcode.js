@@ -29,13 +29,13 @@ function getaccname() {
 }
 
 const clickActions = {
-    getKaijubyname: () => buttonClick('GET', 'http://localhost:8080/SoloProject/api/kaijuAccount/getAKaijuAccount/' + getaccname()),
-    getAllKaiju: () => buttonClick("GET", "http://localhost:8080/SoloProject/api/kaijuAccount/getAllKaijuAccounts"),
-    deleteKaijuAcc: () => buttonClick('DELETE', 'http://localhost:8080/SoloProject/api/kaijuAccount/deleteKaijuAccount/' + getaccname()),
+    getKaijubyname: () => buttonClick('GET', 'http://35.246.172.168:8888/SoloProject/api/kaijuAccount/getAKaijuAccount/' + getaccname()),
+    getAllKaiju: () => buttonClick("GET", "http://35.246.172.168:8888/SoloProject/api/kaijuAccount/getAllKaijuAccounts"),
+    deleteKaijuAcc: () => buttonClick('DELETE', 'http://35.246.172.168:8888/SoloProject/api/kaijuAccount/deleteKaijuAccount/' + getaccname()),
 
-    createKaijuAcc: () => buttonClick('POST', 'http://localhost:8080/SoloProject/api/kaijuAccount/createKaijuAccount', createkaijuAccount()),
+    createKaijuAcc: () => buttonClick('POST', 'http://35.246.172.168:8888/SoloProject/api/kaijuAccount/createKaijuAccount', createkaijuAccount()),
 
-    updateKaijuAcc: () => buttonClick("PUT", 'http://localhost:8080/SoloProject/api/kaijuAccount/updateKaijuAccount/' + getaccname(), updateAccount()),
+    updateKaijuAcc: () => buttonClick("PUT", 'http://35.246.172.168:8888/SoloProject/api/kaijuAccount/updateKaijuAccount/' + getaccname(), updateAccount()),
     //getFilmbyname: () => buttonClick('GET', 'http://localhost:8080/SoloProject/api/FilmData/getAFilmData/' + getaccname()),
 
 };
@@ -122,7 +122,7 @@ function filmDetailButton() {
     req.onload = function () {
         promisesfilm(req);
     }
-    req.open('GET', 'http://localhost:8080/SoloProject/api/FilmData/getAFilmData/' + getaccname());
+    req.open('GET', 'http://35.246.172.168:8888/SoloProject/api/FilmData/getAFilmData/' + getaccname());
     req.send();
 }
 function promisesfilm(req) {
