@@ -10,7 +10,7 @@ INSERT INTO KAIJUACCOUNT (name, height, weight, creatureType, description) VALUE
 INSERT INTO KAIJUACCOUNT (name, height, weight, creatureType, description) VALUES ('King Ghidorrah', '100','300', 'Alien Demon', 'The three headed, bat winged alien invader and rival to GodZilla')
 
 
-INSERT INTO KAIJUACCOUNT (name, height, weight, creatureType, description) VALUES ('Mecha Godzilla', '100','300', 'Robot Lizard', 'A mechanized giant made from the removed head of King Ghidorrah)
+INSERT INTO KAIJUACCOUNT (name, height, weight, creatureType, description) VALUES ('Mecha Godzilla', '100','300', 'Robot Lizard', 'A mechanized giant made from the removed head of King Ghidorrah')
 
 
 INSERT INTO FILMDATA ( name, noOfFilms, firstFilm, winCount) VALUES ('Zilla', '2', 'Godzilla 1998', '0')
