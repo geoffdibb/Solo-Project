@@ -123,7 +123,7 @@ function filmDetailButton() {
     req.onload = function () {
         promisesfilm(req);
     }
-    req.open('GET', 'http://35.246.172.168:8888/SoloProject/api/FilmData/getAFilmData/' + getaccname());
+    req.open('GET', 'http://localhost:8080/SoloProject/api/FilmData/getAFilmData/' + getaccname());
     req.send();
 }
 function promisesfilm(req) {
