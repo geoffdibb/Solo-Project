@@ -6,7 +6,7 @@
 </head>
 
 <body>
-    <input class="btn btn-success btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="CreateAccount" value="CreateAccount"
+    <input class="btn btn-success btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="CreateAccount" value="Create Kaiju"
         onclick="createpage()">
 
     <center>
@@ -18,23 +18,22 @@
                     Kaiju Manager 2019
                     <div class="col">
                         <br>
-           <h1> Codename
-                <input type="text" id="kaijuNameInput" class="form-control">
-            </h1>
+                        <h1> Codename
+                            <input type="text" id="kaijuNameInput" class="form-control">
+                        </h1>
                         <script type="text/javascript" src="Frontendcode.js">
 
                         </script>
-                        <form name="api">
 
 
 
                             <input class="btn btn-success btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="GetallKaiju" value="Display all Kaiju"
                                 onclick="clickActions.getAllKaiju()">
 
-                            <input class="btn btn-success btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="deleteaccount" value="deleteaccount"
+                            <input class="btn btn-success btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="deleteaccount" value="Delete Kaiju"
                                 onclick="clickActions.deleteKaijuAcc()">
 
-                            <input class="btn btn-success btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="getaccountbyid" value="GetAKaiju"
+                            <input class="btn btn-success btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="getaccountbyid" value="Find Kaiju"
                                 onclick="clickActions.getKaijubyname()">
 
 
@@ -43,9 +42,9 @@
 
             </div>
 
- 
 
-             <!-- <div> Height/Wingspan (feet)
+
+            <!-- <div> Height/Wingspan (feet)
                 <input type="number" id="heightInput" class="form-control">
             </div>
             <div> Weight (lbs)
@@ -62,7 +61,6 @@
 
 
             <div id="results"></div>
-            </form>
         </div>
     </center>
 </body>
