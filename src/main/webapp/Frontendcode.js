@@ -29,14 +29,15 @@ function getaccname() {
 }
 
 const clickActions = {
-    getKaijubyname: () => buttonClick('GET', 'http://35.246.172.168:8888/SoloProject/api/kaijuAccount/getAKaijuAccount/' + getaccname()),
-    getAllKaiju: () => buttonClick("GET", "http://35.246.172.168:8888/SoloProject/api/kaijuAccount/getAllKaijuAccounts"),
-    deleteKaijuAcc: () => buttonClick('DELETE', 'http://35.246.172.168:8888/SoloProject/api/kaijuAccount/deleteKaijuAccount/' + getaccname()),
+    getKaijubyname: () => buttonClick('GET', 'http://localhost:8080/SoloProject/api/kaijuAccount/getAKaijuAccount/' + getaccname()),
+    getAllKaiju: () => buttonClick("GET", "http://localhost:8080/SoloProject/api/kaijuAccount/getAllKaijuAccounts"),
+    deleteKaijuAcc: () => buttonClick('DELETE', 'http://localhost:8080/SoloProject/api/kaijuAccount/deleteKaijuAccount/' + getaccname()),
 
-    createKaijuAcc: () => buttonClick('POST', 'http://35.246.172.168:8888/SoloProject/api/kaijuAccount/createKaijuAccount', createkaijuAccount()),
+    createKaijuAcc: () => buttonClick('POST', 'http://localhost:8080/SoloProject/api/kaijuAccount/createKaijuAccount', createkaijuAccount()),
 
-    updateKaijuAcc: () => buttonClick("PUT", 'http://35.246.172.168:8888/SoloProject/api/kaijuAccount/updateKaijuAccount/' + getaccname(), updateAccount()),
+    updateKaijuAcc: () => buttonClick("PUT", 'http://localhost:8080/SoloProject/api/kaijuAccount/updateKaijuAccount/' + getaccname(), updateAccount()),
     //getFilmbyname: () => buttonClick('GET', 'http://localhost:8080/SoloProject/api/FilmData/getAFilmData/' + getaccname()),
+   // updateKaijuAcc: () => buttonClick("PUT", 'http://35.246.172.168:8888/SoloProject/api/kaijuAccount/updateKaijuAccount/' + getaccname(), updateAccount()),
 
 };
 function buttonClick(reqType, url, body) {
@@ -97,7 +98,7 @@ function resolved(result) {
         tbody.innerHTML += tr;
     }
     else {
-        tr += "<td> ___Codename___ </td> <td> ___Height___ </td> <td> ___Weight___ </td> <td> ___genus___ </td> <td> ___Description___ </td> <td> ___more___ </td></tr>";
+        tr += "<td> ___Codename___ </td> <td> ___Height/Wingspan(feet)___ </td> <td> ___Weight(lbs)___ </td> <td> ___genus___ </td> <td> ___Description___ </td> <td> ___more___ </td></tr>";
 
         let btn = '<input class="btn btn-success btn btn-primary btn mx-auto font-weight-bold" id="btnfilm" type="button" name="filmbutton" value="filmbutton" onclick="filmDetailButton()">'
 
@@ -149,6 +150,8 @@ function promisesfilm(req) {
 function resolvefilm(result) {
      let node = document.createElement("tbody");
     node.setAttribute("id", "tbodyfilm");
+        node.setAttribute("class","table");
+
     document.getElementById("results").appendChild(node);
         let tr = "<br><tr>";
         tr += "<td> Number Of Films </td> <td> First Film </td> <td> Win Count</td> </tr>";
