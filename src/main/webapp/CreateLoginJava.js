@@ -24,9 +24,9 @@ function getaccname() {
 const clickActions = {
 
 
-    createLogin: () => buttonClick('POST', 'http://localhost:8080/SoloProject/api/LoginAccount/createLoginAccount', createLoginAccount()),
+    createLogin: () => buttonClick('POST', 'http://35.228.254.158:8888/SoloProject/api/LoginAccount/createLoginAccount', createLoginAccount()),
 
-    updateFaveKaiju: () => buttonClick("PUT", 'http://localhost:8080/SoloProject/api/LoginAccount/updateLoginAccount/' + getaccname(), updateAccount()),
+    updateFaveKaiju: () => buttonClick("PUT", 'http://35.228.254.158:8888/SoloProject/api/LoginAccount/updateLoginAccount/' + getaccname(), updateAccount()),
 
 
 };
