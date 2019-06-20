@@ -164,3 +164,7 @@ function resolvefilm(result) {
     function createpage(){
 document.location.href = "CreateKaijuPage.html";
     };
+    
+    function backToLogin(){
+document.location.href = "LoginPage.html";
+    };
