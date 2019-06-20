@@ -13,12 +13,12 @@ pipeline{
                 }
                 stage('--package--'){
                         steps{
-                                sh "mvn package"
+                                sh "mvn verify"
                         }
                 }
 		stage('--verify--'){
                         steps{
-                                sh "mvn verify"
+                                sh "mvn package"
                         }
                 }
 		stage('--deploy--'){
@@ -26,6 +26,7 @@ pipeline{
                                 sh "cd /"
 				sh "pwd"
 				sh "sudo cp /var/lib/jenkins/workspace/solopipeproj/target/SoloProject.war /home/dibbgeoffrey/wildfly-10.1.0.Final/standalone/deployments/"
+				sh "sudo ls /home/dibbgeoffrey/wildfly-10.1.0.Final/standalone/deployments/"
                         }
                 }
         }
