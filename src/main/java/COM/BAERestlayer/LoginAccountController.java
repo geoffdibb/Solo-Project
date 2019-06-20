@@ -27,8 +27,8 @@ public class LoginAccountController {
 	@Path("/createLoginAccount")
 	@POST
 	@Produces({ "application/json" })
-	public String addALoginAccount(String name) {
-		return service.createLoginAccount(name);
+	public String addALoginAccount(String account) {
+		return service.createLoginAccount(account);
 	}
 
 	@Path("/deleteLoginAccount/{name}")
