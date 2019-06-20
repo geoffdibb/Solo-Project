@@ -6,7 +6,7 @@ function getLoginname() {
 
 const clickActions = {
     getLogin: () => buttonClick('GET', 'http://localhost:8080/SoloProject/api/LoginAccount/getLoginAccount/' + getLoginname()),
-
+ deleteLogin: () => buttonClick('DELETE', 'http://localhost:8080/SoloProject/api/LoginAccount/deleteLoginAccount/' + getLoginname()),
 };
 function buttonClick(reqType, url, body) {
 
