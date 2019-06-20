@@ -32,9 +32,9 @@ const clickActions = {
 
    // getAllKaiju: () => buttonClick("GET", "http://localhost:8080/SoloProject/api/kaijuAccount/getAllKaijuAccounts"),
 
-    createKaijuAcc: () => buttonClick('POST', 'http://localhost:8080/SoloProject/api/kaijuAccount/createKaijuAccount', createkaijuAccount()),
+    createKaijuAcc: () => buttonClick('POST', 'http://35.228.254.158:8888/SoloProject/api/kaijuAccount/createKaijuAccount', createkaijuAccount()),
 
-    updateKaijuAcc: () => buttonClick("PUT", 'http://localhost:8080/SoloProject/api/kaijuAccount/updateKaijuAccount/' + getaccname(), updateAccount()),
+    updateKaijuAcc: () => buttonClick("PUT", 'http://35.228.254.158:8888/SoloProject/api/kaijuAccount/updateKaijuAccount/' + getaccname(), updateAccount()),
     //getFilmbyname: () => buttonClick('GET', 'http://localhost:8080/SoloProject/api/FilmData/getAFilmData/' + getaccname()),
    // updateKaijuAcc: () => buttonClick("PUT", 'http://35.246.172.168:8888/SoloProject/api/kaijuAccount/updateKaijuAccount/' + getaccname(), updateAccount()),
 

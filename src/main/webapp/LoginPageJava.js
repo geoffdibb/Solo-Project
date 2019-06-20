@@ -5,8 +5,8 @@ function getLoginname() {
 }
 
 const clickActions = {
-    getLogin: () => buttonClick('GET', 'http://localhost:8080/SoloProject/api/LoginAccount/getLoginAccount/' + getLoginname()),
- deleteLogin: () => buttonClick('DELETE', 'http://localhost:8080/SoloProject/api/LoginAccount/deleteLoginAccount/' + getLoginname()),
+    getLogin: () => buttonClick('GET', 'http://35.228.254.158:8888/SoloProject/api/LoginAccount/getLoginAccount/' + getLoginname()),
+ deleteLogin: () => buttonClick('DELETE', 'http://35.228.254.158:8888/SoloProject/api/LoginAccount/deleteLoginAccount/' + getLoginname()),
 };
 function buttonClick(reqType, url, body) {
 
