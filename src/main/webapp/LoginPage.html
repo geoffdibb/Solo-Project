@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+</head>
+
+<body>
+
+    <center>
+
+        <div class="container p-3">
+
+            <div class="row">
+                <div class="col p-3 display-1 font-weight-bold">
+                    Monarch
+                    <div class="col">
+                        <br>
+                        <h1> Login Name
+                            <input type="text" id="kaijuNameInput" class="form-control">
+                        </h1>
+                        <script type="text/javascript" src="LoginPageJava.js">
+
+                        </script>
+
+
+                        <input class="btn btn-success btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="deleteaccount" value="Delete Login"
+                            onclick="clickActions.deleteLogin()">
+
+                        <input class="btn btn-success btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="Login" value="Login"
+                            onclick="clickActions.getLogin()">
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="results"></div>
+        </div>
+    </center>
+</body>
+
+
+</html>

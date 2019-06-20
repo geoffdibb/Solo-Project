@@ -28,3 +28,5 @@ INSERT INTO FILMDATA ( name, noOfFilms, firstFilm, winCount) VALUES ('Mecha Godz
 
 INSERT INTO FILMDATA ( name, noOfFilms, firstFilm, winCount) VALUES ('Rodan', '12' , 'Rodan 1956', '4')
 
+INSERT INTO LOGINACCOUNT( userName, faveKaiju) VALUES ('Geoff', 'Mothra')
+

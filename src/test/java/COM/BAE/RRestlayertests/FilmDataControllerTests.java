@@ -16,8 +16,6 @@ import COM.BAERestlayer.FilmDataController;
 
 public class FilmDataControllerTests {
 
-	private static final String MOCK_VALUE2 = "test_value_2";
-
 	private static final String MOCK_VALUE = "Zilla";
 
 	@InjectMocks
