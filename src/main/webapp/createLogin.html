@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <input class="btn btn-success btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="backuppage" value="Return"
+        onclick="backpage()">
+
+    <div class="container p-3">
+
+        <div class="row">
+            <div class="col p-3 display-1 font-weight-bold">
+                Enter Login Details
+                <div class="col">
+
+                    <script type="text/javascript" src="CreateLoginJava.js">
+
+                    </script>
+                    <input class="btn btn-success btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="Create Login" value="Create Login"
+                        onclick="clickActions.createLogin()">
+
+
+                    <input class="btn btn-success btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="update Fave Kaiju" value="update Fave Kaiju"
+                        onclick="clickActions.updateFaveKaiju()">
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <div> Login Name
+            <input type="text" id="kaijuNameInput" class="form-control">
+        </div>
+
+        <div> Favourite Kaiju
+            <input type="text" id="heightInput" class="form-control">
+        </div>
+
+
+
+
+
+        <div id="results"></div>
+    </div>
+</body>
+
+
+</html>

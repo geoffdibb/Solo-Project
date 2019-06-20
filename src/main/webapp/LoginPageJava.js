@@ -54,3 +54,9 @@ function rejected(reason) {
     console.log(reason);
 }
 
+function createLogin(){
+   document.location.href = "createLogin.html";
+
+
+}
+
