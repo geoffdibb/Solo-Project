@@ -3,38 +3,42 @@
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous">
+                            <link href="Stylepage.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body>
-    <input class="btn btn-success btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="backuppage" value="Return"
+    <input class="btn btn-info btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="backuppage" value="Return"
         onclick="backpage()">
 
 
-        <div class="container p-3">
+        <div class="container p-3" id="containerbox">
 
             <div class="row">
                 <div class="col p-3 display-1 font-weight-bold">
+                    <h1>
                     Enter Login Details
+                    </h1>
                     <div class="col">
                         <script type="text/javascript" src="CreateLoginJava.js">
 
                         </script>
-                        <input class="btn btn-success btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="Create Login" value="Create Login"
+                        <input class="btn btn-info btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="Create Login" value="Create Login"
                             onclick="clickActions.createLogin()">
 
 
-                        <input class="btn btn-success btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="update Fave Kaiju" value="update Fave Kaiju"
+                        <input class="btn btn-info btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="update Fave Kaiju" value="update Fave Kaiju"
                             onclick="clickActions.updateFaveKaiju()">
 
                     </div>
 
-                    <h2> Login Name
+                    <h3> Login Name
                         <input type="text" id="kaijuNameInput" class="form-control">
-                    </h2>
+                    </h3>
 
-                    <h2> Favourite Kaiju
+                    <h3> Favourite Kaiju
                         <input type="text" id="heightInput" class="form-control">
-                    </h2>
+                    </h3>
                     <div>
 
 

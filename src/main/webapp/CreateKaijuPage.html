@@ -3,28 +3,32 @@
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous">
+                            <link href="Stylepage.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body>
-    <input class="btn btn-success btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="backuppage" value="Return"
+    <input class="btn btn-info btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="backuppage" value="Return"
         onclick="backpage()">
     <center>
 
-        <div class="container p-3">
+        <div class="container p-3" id="containerbox">
 
             <div class="row">
                 <div class="col p-3 display-1 font-weight-bold">
+                    <h2>
                     Kaiju Manager 2019
+                    </h2>
                     <div class="col">
 
                         <script type="text/javascript" src="CreateKaijuPagejava.js">
 
                         </script>
-                            <input class="btn btn-success btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="CreateKaiju" value="Create Kaiju"
+                            <input class="btn btn-info btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="CreateKaiju" value="Create Kaiju"
                                 onclick="clickActions.createKaijuAcc()">
 
 
-                            <input class="btn btn-success btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="updateKaiju" value="update Kaiju"
+                            <input class="btn btn-info btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="updateKaiju" value="update Kaiju"
                                 onclick="clickActions.updateKaijuAcc()">
 
                     </div>

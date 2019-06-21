@@ -36,8 +36,7 @@ const clickActions = {
     createKaijuAcc: () => buttonClick('POST', 'http://35.228.254.158:8888/SoloProject/api/kaijuAccount/createKaijuAccount', createkaijuAccount()),
 
     updateKaijuAcc: () => buttonClick("PUT", 'http://35.228.254.158:8888/SoloProject/api/kaijuAccount/updateKaijuAccount/' + getaccname(), updateAccount()),
-    //getFilmbyname: () => buttonClick('GET', 'http://localhost:8080/SoloProject/api/FilmData/getAFilmData/' + getaccname()),
-   // updateKaijuAcc: () => buttonClick("PUT", 'http://35.246.172.168:8888/SoloProject/api/kaijuAccount/updateKaijuAccount/' + getaccname(), updateAccount()),
+
 
 };
 function buttonClick(reqType, url, body) {
@@ -76,12 +75,12 @@ function promises(req) {
 function resolved(result) {
     let node = document.createElement("tbody");
     node.setAttribute("id", "tbody");
-    node.setAttribute("class","table");
+    node.setAttribute("class","table table-dark");
 
     document.getElementById("results").appendChild(node);
     let tr = "<tr>";
     if (result.name === undefined) {
-        tr += "<td> Codename </td></tr>";
+        tr += "<td> ____Codename____ </td></tr>";
 
 
         for (let c in result) {
@@ -90,23 +89,18 @@ function resolved(result) {
 
             tr += "<td>" + result[c].name + "</td> </tr>";
 
-            // let node = document.createElement("div");
-            // node.setAttribute("id", "resInner");
-            // document.getElementById("results").appendChild(node);
-            // node.appendChild(textnode);
+
         }
         tbody.innerHTML += tr;
     }
     else {
         tr += "<td> ___Codename___ </td> <td> ___Height/Wingspan(feet)___ </td> <td> ___Weight(lbs)___ </td> <td> ___genus___ </td> <td> ___Description___ </td> <td> ___more___ </td></tr>";
 
-        let btn = '<input class="btn btn-success btn btn-primary btn mx-auto font-weight-bold" id="btnfilm" type="button" name="filmbutton" value="filmbutton" onclick="filmDetailButton()">'
+        let btn = '<input class="btn btn-info btn btn-primary btn mx-auto font-weight-bold" id="btnfilm" type="button" name="filmbutton" value="filmbutton" onclick="filmDetailButton()">'
 
         tr += "<td>" + result.name + "</td> <td>" + result.height + "</td> <td>" + result.weight + "</td> <td>" + result.creatureType + "</td> <td>" + result.description + "</td> <td>" + btn + "</td> </tr>";
-        //  let textnode = document.createTextNode(output);
 
 
-        // node.appendChild(textnode);
         tbody.innerHTML += tr;
 
     }
@@ -150,9 +144,9 @@ function promisesfilm(req) {
 function resolvefilm(result) {
      let node = document.createElement("tbody");
     node.setAttribute("id", "tbodyfilm");
-        node.setAttribute("class","table");
+        node.setAttribute("class","table table-bordered");
 
-    document.getElementById("results").appendChild(node);
+    document.getElementById("filmresults").appendChild(node);
         let tr = "<br><tr>";
         tr += "<td> Number Of Films </td> <td> First Film </td> <td> Win Count</td> </tr>";
 
