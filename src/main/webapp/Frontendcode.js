@@ -75,12 +75,12 @@ function promises(req) {
 function resolved(result) {
     let node = document.createElement("tbody");
     node.setAttribute("id", "tbody");
-    node.setAttribute("class","table");
+    node.setAttribute("class","table table-dark");
 
     document.getElementById("results").appendChild(node);
     let tr = "<tr>";
     if (result.name === undefined) {
-        tr += "<td> Codename </td></tr>";
+        tr += "<td> ____Codename____ </td></tr>";
 
 
         for (let c in result) {
@@ -144,9 +144,9 @@ function promisesfilm(req) {
 function resolvefilm(result) {
      let node = document.createElement("tbody");
     node.setAttribute("id", "tbodyfilm");
-        node.setAttribute("class","table");
+        node.setAttribute("class","table table-bordered");
 
-    document.getElementById("results").appendChild(node);
+    document.getElementById("filmresults").appendChild(node);
         let tr = "<br><tr>";
         tr += "<td> Number Of Films </td> <td> First Film </td> <td> Win Count</td> </tr>";
 
