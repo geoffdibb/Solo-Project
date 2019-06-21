@@ -96,7 +96,7 @@ function resolved(result) {
     else {
         tr += "<td> ___Codename___ </td> <td> ___Height/Wingspan(feet)___ </td> <td> ___Weight(lbs)___ </td> <td> ___genus___ </td> <td> ___Description___ </td> <td> ___more___ </td></tr>";
 
-        let btn = '<input class="btn btn-info btn btn-primary btn mx-auto font-weight-bold" id="btnfilm" type="button" name="filmbutton" value="filmbutton" onclick="filmDetailButton()">'
+        let btn = '<input class="btn btn-info btn btn-primary btn mx-auto font-weight-bold" id="btnfilm" type="button" name="filmbutton" value="Film Details" onclick="filmDetailButton()">'
 
         tr += "<td>" + result.name + "</td> <td>" + result.height + "</td> <td>" + result.weight + "</td> <td>" + result.creatureType + "</td> <td>" + result.description + "</td> <td>" + btn + "</td> </tr>";
 
