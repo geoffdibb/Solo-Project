@@ -1,5 +1,5 @@
   #containerbox {
-  background-color: rgba(184, 212, 175, 0.53);
+  background-color: rgba(184, 212, 175, 0.70);
   border-style: solid;
   border-width: 3px;
   border-color: black;
@@ -11,6 +11,7 @@
 }
   
   body {
+      background-image: url("kaijuwallpaper.jpg");
   background-color: #212121; /* Used if the image is unavailable */
   height: 100%; /* You must set a specified height */
   background-position: center; /* Center the image */
@@ -21,5 +22,11 @@
 h2{
       text-decoration: underline;
   font-size: 100px;
+
+}
+#results{
+  font-size: 18px;
+  font-weight: bold;
+
 
 }

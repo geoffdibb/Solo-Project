@@ -3,57 +3,54 @@
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous">
-                    <link href="Stylepage.css" rel="stylesheet" type="text/css" />
+    <link href="Stylepage.css" rel="stylesheet" type="text/css" />
 
 </head>
 
 <body>
-        <input class="btn btn-info btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="Logout" value="Logout"
-        onclick="backToLogin()">
+    <input class="btn btn-info btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="Logout" value="Logout" onclick="backToLogin()">
     <input class="btn btn-info btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="CreateAccount" value="Create Kaiju"
         onclick="createpage()">
 
 
-        <div class="container p-3" id="containerbox">
+    <div class="container p-3" id="containerbox">
 
-            <div class="row">
-                <div class="col p-3 display-1 font-weight-bold" id="titletext">
-                    <h2>
+        <div class="row">
+            <div class="col p-3 display-1 font-weight-bold" id="titletext">
+                <h2>
                     Kaiju Manager 2019
-                    </h2>
-                    <div class="col">
-                        <br>
-                        <h1> Codename
-                            <input type="text" id="kaijuNameInput" class="form-control">
-                        </h1>
-                        <script type="text/javascript" src="Frontendcode.js">
+                </h2>
+                <div class="col">
+                    <br>
+                    <h1> Codename
+                        <input type="text" id="kaijuNameInput" class="form-control">
+                    </h1>
+                    <script type="text/javascript" src="Frontendcode.js">
 
-                        </script>
-
-
-
-                            <input class="btn btn-info btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="GetallKaiju" value="Display all Kaiju"
-                                onclick="clickActions.getAllKaiju()">
-
-                            <input class="btn btn-info btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="deleteaccount" value="Delete Kaiju"
-                                onclick="clickActions.deleteKaijuAcc()">
-
-                            <input class="btn btn-info btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="getaccountbyid" value="Find Kaiju"
-                                onclick="clickActions.getKaijubyname()">
+                    </script>
 
 
-                    </div>
+
+                    <input class="btn btn-info btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="GetallKaiju" value="Display all Kaiju"
+                        onclick="clickActions.getAllKaiju()">
+
+                    <input class="btn btn-info btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="deleteaccount" value="Delete Kaiju"
+                        onclick="clickActions.deleteKaijuAcc()">
+
+                    <input class="btn btn-info btn btn-primary btn-lg mx-auto font-weight-bold" type="button" name="getaccountbyid" value="Find Kaiju"
+                        onclick="clickActions.getKaijubyname()">
+
+
                 </div>
-
             </div>
 
+        </div>
 
 
-<center>
+
+        <center>
             <div id="results"></div>
 
-            <div id= "filmresults"></div>
-        </div>
         </center>
 </body>
 
