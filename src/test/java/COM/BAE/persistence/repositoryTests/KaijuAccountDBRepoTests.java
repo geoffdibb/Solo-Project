@@ -71,7 +71,7 @@ public class KaijuAccountDBRepoTests {
 	}
 
 	@Test
-	public void testDeleteKAiju() {
+	public void testDeleteKaiju() {
 		String reply = repo.deleteKaijuAccount("Zilla");
 		assertTrue(reply.contains("Deleted"));
 	}
