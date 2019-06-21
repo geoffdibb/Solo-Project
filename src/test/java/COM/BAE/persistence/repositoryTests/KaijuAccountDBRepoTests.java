@@ -76,6 +76,13 @@ public class KaijuAccountDBRepoTests {
 		assertTrue(reply.contains("Deleted"));
 	}
 
+	@Test
+	public void testDeleteKaijuTrue() {
+		Mockito.when(manager.contains(Mockito.any())).thenReturn(true);
+		String reply = repo.deleteKaijuAccount("Zilla");
+		assertTrue(reply.contains("Deleted"));
+	}
+
 	private static final KaijuAccount kaiju1 = new KaijuAccount("Zilla", 15, 15, "lizard", "big lizard");
 
 	@Test
