@@ -1,7 +1,6 @@
 package COM.BAE.BusinessLayertests;
 
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -26,10 +25,6 @@ public class FilmDataImplementationTests {
 
 	@Mock
 	private FilmDataRepository FilmDataRepo;
-
-	@Before
-	public void setup() {
-	}
 
 	@Test
 	public void testGetAFilm() {
