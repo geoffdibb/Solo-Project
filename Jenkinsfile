@@ -21,6 +21,7 @@ stage('---setup---'){
                                 sh "mvn verify"
                         }
                 }
+
 				stage('--sonar--'){
                         steps{
                                 sh "mvn sonar:sonar"
