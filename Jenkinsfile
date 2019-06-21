@@ -30,7 +30,7 @@ stage('---setup---'){
                         steps{
                                 sh "cd /"
 				sh "pwd"
-				sh "sudo cp /var/lib/jenkins/workspace/solopipeproj/target/SoloProject.war /var/lib/wildfly-10.1.0.Final/standalone/deployments/"
+				sh "sudo cp /var/lib/jenkins/workspace/${JOB_NAME}/target/SoloProject.war /var/lib/wildfly-10.1.0.Final/standalone/deployments/"
 				sh "sudo ls /var/lib/wildfly-10.1.0.Final/standalone/deployments/"
                         }
                 }
