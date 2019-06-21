@@ -26,6 +26,12 @@ stage('---setup---'){
                                 sh "mvn package"
                         }
                 }
+		stage('--surefire--'){
+                        steps{
+                                sh "mvn surefire-report:report"
+				
+                        }
+                }
 		stage('--deploy--'){
                         steps{
                                 sh "cd /"
@@ -34,5 +40,10 @@ stage('---setup---'){
 				sh "sudo ls /var/lib/wildfly-10.1.0.Final/standalone/deployments/"
                         }
                 }
+		stage('--email--'){
+                        steps{
+                                emailext attachLog: true, attachmentsPattern: 'target/site/jacoco/index.html, target/site/surefire-report.html', body: '', subject: '', to: 'geoffdibb@yahoo.co.uk'
+                	}
+        	}
         }
 }
