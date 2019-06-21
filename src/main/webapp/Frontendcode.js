@@ -75,7 +75,7 @@ function promises(req) {
 function resolved(result) {
     let node = document.createElement("tbody");
     node.setAttribute("id", "tbody");
-    node.setAttribute("class","table table-dark");
+    node.setAttribute("class","table table-bordered");
 
     document.getElementById("results").appendChild(node);
     let tr = "<tr>";
@@ -146,7 +146,7 @@ function resolvefilm(result) {
     node.setAttribute("id", "tbodyfilm");
         node.setAttribute("class","table table-bordered");
 
-    document.getElementById("filmresults").appendChild(node);
+    document.getElementById("results").appendChild(node);
         let tr = "<br><tr>";
         tr += "<td> Number Of Films </td> <td> First Film </td> <td> Win Count</td> </tr>";
 
