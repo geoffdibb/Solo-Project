@@ -75,7 +75,7 @@ function promises(req) {
 function resolved(result) {
     let node = document.createElement("tbody");
     node.setAttribute("id", "tbody");
-    node.setAttribute("class","table table-dark");
+    node.setAttribute("class","table table-bordered");
 
     document.getElementById("results").appendChild(node);
     let tr = "<tr>";
