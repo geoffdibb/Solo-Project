@@ -29,7 +29,6 @@ public class FilmDataDBRepoTest {
 	@Mock
 	private EntityManager manager;
 
-	// @Mock
 	private JSONUtil util;
 
 	@Mock

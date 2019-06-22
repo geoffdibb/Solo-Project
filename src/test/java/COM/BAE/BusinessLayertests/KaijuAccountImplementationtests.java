@@ -22,7 +22,6 @@ public class KaijuAccountImplementationtests {
 
 	@InjectMocks
 	private KaijuAccountImplementation endpoint;
-	// Class under test
 
 	@Mock
 	private KaijuAccountRepository kaijuAccountRepo;
