@@ -30,7 +30,6 @@ public class KaijuAccountDBRepoTests {
 	@Mock
 	private EntityManager manager;
 
-	// @Mock
 	private JSONUtil util;
 
 	@Mock
@@ -56,8 +55,6 @@ public class KaijuAccountDBRepoTests {
 		kaiju.add(new KaijuAccount("Zilla", 15, 15, "lizard", "big lizard"));
 
 		Mockito.when(query.getResultList()).thenReturn(kaiju);
-
-		// System.out.println(repo.getAllKaijuAccounts());
 
 		Assert.assertEquals(
 				"[{\"name\":\"Zilla\",\"height\":15,\"weight\":15,\"creatureType\":\"lizard\",\"description\":\"big lizard\"}]",

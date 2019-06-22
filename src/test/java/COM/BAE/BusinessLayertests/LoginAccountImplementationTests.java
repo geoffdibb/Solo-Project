@@ -22,7 +22,6 @@ public class LoginAccountImplementationTests {
 
 	@InjectMocks
 	private LoginAccountImplementation endpoint;
-	// Class under test
 
 	@Mock
 	private LoginAccountRepository LoginAccountRepo;

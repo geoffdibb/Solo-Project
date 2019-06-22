@@ -31,7 +31,6 @@ public class LoginAccountDBRepoTests {
 	@Mock
 	private EntityManager manager;
 
-	// @Mock
 	private JSONUtil util;
 
 	@Mock

@@ -15,13 +15,10 @@ import COM.BAE.persistence.repository.FilmDataRepository;
 
 public class FilmDataImplementationTests {
 
-	private static final String MOCK_VALUE2 = "test_value_2";
-
 	private static final String MOCK_VALUE = "Zilla";
 
 	@InjectMocks
 	private FilmDataImplementation endpoint;
-	// Class under test
 
 	@Mock
 	private FilmDataRepository FilmDataRepo;
