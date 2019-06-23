@@ -1,19 +1,19 @@
-INSERT INTO KAIJUACCOUNT (name, height, weight, creatureType, description) VALUES ('Zilla', '100','150', 'Mutant Reptile', 'The disappointing American interpretation, weaker than most kaiju')
+INSERT INTO KAIJUACCOUNT (name, height, weight, creatureType, description) VALUES ('Zilla', '400','1500', 'Mutant Reptile', 'The disappointing American interpretation, weaker than most kaiju')
 
 
-INSERT INTO KAIJUACCOUNT (name, height, weight, creatureType, description) VALUES ('Godzilla', '100','300', 'Lizard', 'The original king of kaiju')
+INSERT INTO KAIJUACCOUNT (name, height, weight, creatureType, description) VALUES ('Godzilla', '578','3000', 'Lizard', 'The original king of kaiju')
 
 
-INSERT INTO KAIJUACCOUNT (name, height, weight, creatureType, description) VALUES ('Mothra', '100','129', 'Moth', 'The benevolent Moth goddess')
+INSERT INTO KAIJUACCOUNT (name, height, weight, creatureType, description) VALUES ('Mothra', '750','1290', 'Moth', 'The benevolent Moth goddess')
 
 
-INSERT INTO KAIJUACCOUNT (name, height, weight, creatureType, description) VALUES ('King Ghidorrah', '100','356', 'Alien Demon', 'The three headed, bat winged alien invader and rival to GodZilla')
+INSERT INTO KAIJUACCOUNT (name, height, weight, creatureType, description) VALUES ('King Ghidorrah', '650','2750', 'Alien Demon', 'The three headed, bat winged alien invader and rival to GodZilla')
 
 
-INSERT INTO KAIJUACCOUNT (name, height, weight, creatureType, description) VALUES ('Mecha Godzilla', '100','347', 'Robot Lizard', 'A mechanized giant made from the removed head of King Ghidorrah')
+INSERT INTO KAIJUACCOUNT (name, height, weight, creatureType, description) VALUES ('Mecha Godzilla', '588','3470', 'Robot Lizard', 'A mechanized giant made from the removed head of King Ghidorrah')
 
 
-INSERT INTO KAIJUACCOUNT (name, height, weight, creatureType, description) VALUES ('Rodan', '150','300', 'Flaming Pterodactyl', 'The lava born dragon bird')
+INSERT INTO KAIJUACCOUNT (name, height, weight, creatureType, description) VALUES ('Rodan', '576','2000', 'Flaming Pterodactyl', 'The lava born dragon bird')
 
 
 INSERT INTO FILMDATA ( name, noOfFilms, firstFilm, winCount) VALUES ('Zilla', '2', 'Godzilla 1998', '0')
